@@ -39,7 +39,7 @@ namespace MagellanTest.Controllers
                     using (var command = new NpgsqlCommand())
                     {
                         command.Connection = connection;
-                        command.CommandText = "INSERT INTO item (item_name, parent_item, item_cost, req_date) VALUES (@itemName, @parentItem, @itemCost, @reqDate) RETURNING item_id";
+                        command.CommandText = "INSERT INTO Item (item_name, parent_item, item_cost, req_date) VALUES (@itemName, @parentItem, @itemCost, @reqDate) RETURNING item_id";
                         command.Parameters.AddWithValue("itemName", item.ItemName);
                         command.Parameters.AddWithValue("parentItem", item.ParentItem);
                         command.Parameters.AddWithValue("itemCost", item.ItemCost);
@@ -63,7 +63,7 @@ namespace MagellanTest.Controllers
                 using var connection = new NpgsqlConnection(_dbContext);
                 connection.Open();
 
-                using var cmd = new NpgsqlCommand("SELECT item_id, item_name, parent_item, item_cost, req_date FROM item WHERE item_id = @id", connection);
+                using var cmd = new NpgsqlCommand("SELECT item_id, item_name, parent_item, item_cost, req_date FROM Item WHERE item_id = @item_id", connection);
                 cmd.Parameters.AddWithValue("item_id", id);
 
                 using var reader = cmd.ExecuteReader();
