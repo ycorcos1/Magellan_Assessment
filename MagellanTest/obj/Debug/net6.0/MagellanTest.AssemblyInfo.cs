@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MagellanTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a65ce2cdc87762a9975e3f70ed71dfadd650e8eb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a3b11565164f63c0298e3e3bfe469968a9acb67")]
 [assembly: System.Reflection.AssemblyProductAttribute("MagellanTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MagellanTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
